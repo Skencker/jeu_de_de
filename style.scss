@@ -1,0 +1,68 @@
+$theme-colors: (
+  "primary": rgb(241, 153, 212),
+  "danger": rgb(153, 159, 241),
+);
+
+%bgglass {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(50, 51, 53, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+h1 {
+  color: #a8eb12;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.regle {
+  font-size: 14px;
+  @extend %bgglass;
+
+  h2 {
+    font-size: 18px
+  }
+}
+
+.box1,
+.box2 {
+  @extend %bgglass;
+}
+
+body {
+  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.win {
+  font-size: 50px;
+  color: #a8eb12;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.box {
+  border-radius: 50px;
+  box-shadow: 5px 5px 5px rgba(66, 66, 66, 0.541); 
+}
+
+.player {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 50px;
+}
+
+@import "./bootstrap-5.0.0-beta3/scss/bootstrap.scss";
